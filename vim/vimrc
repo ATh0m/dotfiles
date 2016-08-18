@@ -1,0 +1,134 @@
+" Author: Tomasz Nanowski
+
+set nocompatible
+
+" ================ General Config ====================
+
+set number                      " Show line numbers
+set backspace=indent,eol,start  " Allow backspace in insert mode
+set history=1000                " Set amount of lines to remember in history
+set showcmd                     " Show info about current command
+set autoread                    " Reload files changed outside vim
+
+set hidden                      " A buffer becomes hidden when it is abandoned
+
+set shell=sh                    " Set shell in vim
+set lazyredraw                  " Don't redraw while executing macros (good performance config)
+
+syntax on                       " Enable syntax highlighting
+
+let mapleader=","               " Set map leader to extra key combinations
+
+" Disable annoying sound on errors
+set noerrorbells
+set novisualbell
+
+" ======================= Plug =======================
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+
+Plug 'scrooloose/syntastic'
+
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+
+" ================ Turn Off Swap Files ==============
+
+set noswapfile
+set nobackup
+set nowb
+
+" ================ Indentation ======================
+
+set expandtab                   " Use spaces instead of tabs
+
+set smarttab                    " Be smart when using tabs :)
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set linebreak
+set textwidth=500
+
+set autoindent                  " Auto indent
+set smartindent                 " Smart indent
+set wrap                        " Wrap lines
+
+filetype plugin on
+filetype indent on
+
+" ================ Folds ============================
+
+set foldmethod=indent           " Fold based on indent
+set foldnestmax=3               " Deepest fold is 3 levels
+set nofoldenable                " Dont fold by default
+
+" ================ Completion =======================
+
+set wildmode=list:longest
+set wildmenu                    " Enable the Wild menu
+set wildignore=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+
+" ================ Scrolling ========================
+
+set scrolloff=8
+set sidescrolloff=15
+set sidescroll=1
+
+set guioptions-=r               " Remove right-hand scroll bar
+set guioptions-=L               " Remove left-hand scroll bar
+
+" ================ Search ===========================
+
+set incsearch                   " Find the next match as we type the search
+set hlsearch                    " Highlight searches by default
+set ignorecase                  " Ignore case when searching...
+set smartcase                   " ...unless we type a capital
+
+set magic                       " For regular expressions turn magic on
+set showmatch                   " Show matching brackets when text indicator is over them
+
+" ============== Colors and Fonts ===================
+
+set background=dark
+try
+    colorscheme solarized
+catch
+endtry
+
+set guifont=Inconsolata\ for\ Powerline:h16
+set encoding=utf-8              " Set default encoding
+set ffs=unix,dos,mac            " Use Unix as the standard file type
+
+" =============== Keyboard shortcuts ================
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" =================== Airline =======================
+
+set laststatus=2
+
+let g:airline_powerline_fonts = 1
+
+" ================== NERD tree ======================
+
+" Cmd-Shift-N for nerd tree
+nmap <D-N> :NERDTreeToggle<CR>
+
+" ==================== Syntastic ====================
+
+let g:syntastic_enable_signs = 1  " Mark syntax errors with :signs
+let g:syntastic_auto_jump = 0     " Automatically jump to the error when saving the file
+let g:syntastic_auto_loc_list = 1 " Show the error list automatically
+let g:syntastic_quiet_messages = {'level': 'warnings'}
+
