@@ -30,12 +30,26 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
 
+Plug 'scrooloose/nerdcommenter'
+
 Plug 'scrooloose/syntastic'
 
 Plug 'altercation/vim-colors-solarized'
 
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'tpope/vim-surround'
+
+Plug 'kien/ctrlp.vim'
+
+Plug 'airblade/vim-gitgutter'
+
+Plug 'ervandew/supertab'
+
+Plug 'klen/python-mode', { 'for': 'python' }
+
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
