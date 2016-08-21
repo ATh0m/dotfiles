@@ -51,6 +51,10 @@ Plug 'klen/python-mode', { 'for': 'python' }
 
 Plug 'terryma/vim-multiple-cursors'
 
+Plug 'sheerun/vim-polyglot'
+
+Plug 'edkolev/tmuxline.vim'
+
 call plug#end()
 
 " ================ Turn Off Swap Files ==============
