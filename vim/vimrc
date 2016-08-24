@@ -29,8 +29,10 @@ set novisualbell
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToogle' }
 
 Plug 'scrooloose/nerdcommenter'
 
@@ -54,6 +56,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'edkolev/tmuxline.vim'
+
+Plug 'valloric/youcompleteme'
 
 call plug#end()
 
