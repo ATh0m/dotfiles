@@ -145,8 +145,16 @@ nmap <D-N> :NERDTreeToggle<CR>
 
 " ==================== Syntastic ====================
 
-let g:syntastic_enable_signs = 1  " Mark syntax errors with :signs
+" Configure statusline
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Recomended settings
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1 
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 let g:syntastic_auto_jump = 0     " Automatically jump to the error when saving the file
-let g:syntastic_auto_loc_list = 1 " Show the error list automatically
-let g:syntastic_quiet_messages = {'level': 'warnings'}
 
