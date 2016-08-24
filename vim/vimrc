@@ -19,6 +19,8 @@ syntax on                       " Enable syntax highlighting
 
 let mapleader=","               " Set map leader to extra key combinations
 
+set mouse=a                     " Enable mouse use
+
 " Disable annoying sound on errors
 set noerrorbells
 set novisualbell
