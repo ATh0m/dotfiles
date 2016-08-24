@@ -49,8 +49,6 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'ervandew/supertab'
 
-Plug 'klen/python-mode', { 'for': 'python' }
-
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'sheerun/vim-polyglot'
