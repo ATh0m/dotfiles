@@ -5,6 +5,7 @@ set nocompatible
 " ================ General Config ====================
 
 set number                      " Show line numbers
+set relativenumber              " Show relative numbers
 set backspace=indent,eol,start  " Allow backspace in insert mode
 set history=1000                " Set amount of lines to remember in history
 set showcmd                     " Show info about current command
@@ -63,6 +64,8 @@ Plug 'valloric/youcompleteme'
 Plug 'ervandew/supertab'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
+
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
